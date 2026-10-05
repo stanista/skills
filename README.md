@@ -6,6 +6,7 @@ A small, auditable collection of reusable skills for Codex, distributed as an in
 
 | Skill | Purpose |
 | --- | --- |
+| [`ml-experiment`](./skills/ml-experiment/) | Runs and debugs reproducible ML experiments locally or on Google Colab while preserving metrics, artifacts, and Git provenance. |
 | [`safe-local-install`](./skills/safe-local-install/) | Installs or evaluates local software with minimal machine impact, appropriate isolation, source inspection, verification, and rollback guidance. |
 
 ## Install

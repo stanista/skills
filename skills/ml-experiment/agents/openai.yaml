@@ -1,0 +1,4 @@
+interface:
+  display_name: "ML Experiment"
+  short_description: "Run reproducible ML experiments end to end."
+  default_prompt: "Use $ml-experiment to run this machine-learning experiment, debug it, and preserve its results and provenance."
