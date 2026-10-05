@@ -1,0 +1,37 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "safe-local-install",
+  "version": "0.1.0",
+  "description": "Install and evaluate local software with minimal machine impact, appropriate isolation, inspection, verification, and rollback guidance.",
+  "author": {
+    "name": "stanista",
+    "url": "https://github.com/stanista"
+  },
+  "homepage": "https://github.com/stanista/skills",
+  "repository": "https://github.com/stanista/skills",
+  "keywords": [
+    "codex",
+    "skills",
+    "installation",
+    "isolation",
+    "developer-tools"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Safe Local Install",
+        "shortDescription": "Install software with isolation and rollback.",
+        "longDescription": "Install command-line tools, applications, dependencies, and local services while minimizing global machine changes and verifying what was installed and started.",
+        "developerName": "stanista",
+        "category": "Productivity",
+        "capabilities": [
+          "Write"
+        ],
+        "websiteURL": "https://github.com/stanista/skills",
+        "defaultPrompt": [
+          "Install this software locally using the least-impact safe option."
+        ]
+      }
+    }
+  }
+}

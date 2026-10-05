@@ -1,43 +1,48 @@
-# Personal Codex Skills
+# Stanista Skills
 
-A small collection of reusable skills for Codex. Each top-level skill directory is self-contained and includes a `SKILL.md` entry point.
+A small, auditable collection of reusable skills for Codex, distributed as an installable plugin through a Git-backed marketplace.
 
 ## Skills
 
 | Skill | Purpose |
 | --- | --- |
-| [`safe-local-install`](./safe-local-install/) | Installs or evaluates local software with minimal machine impact, appropriate isolation, source inspection, verification, and rollback guidance. |
+| [`safe-local-install`](./skills/safe-local-install/) | Installs or evaluates local software with minimal machine impact, appropriate isolation, source inspection, verification, and rollback guidance. |
 
-## Install a skill
+## Install
 
-Clone this repository somewhere stable, then symlink the skills you want into your user-scoped Codex skills directory:
-
-```sh
-git clone <repository-url> "$HOME/.local/share/personal-codex-skills"
-mkdir -p "$HOME/.agents/skills"
-ln -s "$HOME/.local/share/personal-codex-skills/safe-local-install" \
-  "$HOME/.agents/skills/safe-local-install"
-```
-
-Codex discovers skills from `$HOME/.agents/skills`. If a newly linked skill does not appear, restart Codex.
-
-To install the skill only for one repository, place the symlink under that repository instead:
+Add this repository as a Codex plugin marketplace, then install the plugin:
 
 ```sh
-mkdir -p .agents/skills
-ln -s /absolute/path/to/personal-codex-skills/safe-local-install \
-  .agents/skills/safe-local-install
+codex plugin marketplace add stanista/skills
+codex plugin add safe-local-install@stanista-skills
 ```
+
+Start a new Codex chat after installation so the bundled skill is available. You can inspect installed plugins with:
+
+```sh
+codex plugin list
+```
+
+The plugin contains instructions only: it does not bundle hooks, executables, MCP servers, or background services.
 
 ## Update
 
-Pull the repository on each machine:
+Refresh the marketplace checkout on each machine:
 
 ```sh
-git -C "$HOME/.local/share/personal-codex-skills" pull --ff-only
+codex plugin marketplace upgrade stanista-skills
 ```
 
-Because installations use symlinks, pulled changes are available without copying the skill again. Avoid editing the same branch concurrently on multiple machines; make changes in one clone, commit and push them, then pull elsewhere.
+Start a new chat after an update. Published plugin changes should increment the version in [`plugin.json`](./plugin.json).
+
+## Remove
+
+Remove the plugin, then remove the marketplace if you no longer use any plugin from it:
+
+```sh
+codex plugin remove safe-local-install@stanista-skills
+codex plugin marketplace remove stanista-skills
+```
 
 ## Use
 
@@ -49,9 +54,16 @@ $safe-local-install install the requested utility locally
 
 Review a skill before enabling it. A skill influences agent behavior and may include executable scripts or references in addition to its instructions.
 
+## Repository layout
+
+- [`plugin.json`](./plugin.json) is the portable Agent Plugins manifest.
+- [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) exposes the plugin to Codex from this Git repository.
+- [`skills/`](./skills/) contains the bundled skill directories discovered by plugin hosts.
+
 ## Repository conventions
 
 - Keep each skill focused on one workflow.
 - Give every skill a clear `name` and trigger-oriented `description` in `SKILL.md`.
 - Keep machine-specific files, credentials, generated output, and secrets out of the repository.
 - Validate a skill after changing its structure or metadata.
+- Bump the plugin version when publishing behavior changes.

@@ -1,0 +1,17 @@
+{
+  "name": "stanista-skills",
+  "interface": {
+    "displayName": "Stanista Skills"
+  },
+  "plugins": [
+    {
+      "name": "safe-local-install",
+      "description": "Install local software with isolation, inspection, verification, and rollback guidance.",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
