@@ -1,0 +1,4 @@
+interface:
+  display_name: "Safe Local Install"
+  short_description: "Install software with isolation and rollback."
+  default_prompt: "Use $safe-local-install to install the requested software locally with minimal machine impact and appropriate isolation."
