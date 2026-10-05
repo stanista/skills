@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "safe-local-install",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Install and evaluate local software with minimal machine impact, appropriate isolation, inspection, verification, and rollback guidance.",
   "author": {
     "name": "stanista",
