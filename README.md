@@ -15,7 +15,7 @@ Add this repository as a Codex plugin marketplace, then install the plugin:
 
 ```sh
 codex plugin marketplace add stanista/skills
-codex plugin add safe-local-install@stanista-skills
+codex plugin add stanista-skills@stanista-skills
 ```
 
 Start a new Codex chat after installation so the bundled skill is available. You can inspect installed plugins with:
@@ -36,12 +36,20 @@ codex plugin marketplace upgrade stanista-skills
 
 Start a new chat after an update. Published plugin changes should increment the version in [`plugin.json`](./plugin.json).
 
+If you installed version `0.2.0` or earlier under the original plugin name, migrate once:
+
+```sh
+codex plugin remove safe-local-install@stanista-skills
+codex plugin marketplace upgrade stanista-skills
+codex plugin add stanista-skills@stanista-skills
+```
+
 ## Remove
 
 Remove the plugin, then remove the marketplace if you no longer use any plugin from it:
 
 ```sh
-codex plugin remove safe-local-install@stanista-skills
+codex plugin remove stanista-skills@stanista-skills
 codex plugin marketplace remove stanista-skills
 ```
 
@@ -51,6 +59,7 @@ Codex may select a skill automatically when the request matches its description.
 
 ```text
 $safe-local-install install the requested utility locally
+$ml-experiment run and document this benchmark reproducibly
 ```
 
 Review a skill before enabling it. A skill influences agent behavior and may include executable scripts or references in addition to its instructions.

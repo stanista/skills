@@ -5,13 +5,13 @@
   },
   "plugins": [
     {
-      "name": "safe-local-install",
-      "description": "Install local software with isolation, inspection, verification, and rollback guidance.",
+      "name": "stanista-skills",
+      "description": "A curated collection of reusable Codex skills for practical development workflows.",
       "source": {
         "source": "local",
         "path": "./"
       },
-      "category": "Productivity"
+      "category": "Developer Tools"
     }
   ]
 }
