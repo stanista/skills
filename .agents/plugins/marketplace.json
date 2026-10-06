@@ -1,12 +1,12 @@
 {
   "name": "stanista-skills",
   "interface": {
-    "displayName": "Stanista Skills"
+    "displayName": "Forgekit"
   },
   "plugins": [
     {
       "name": "stanista-skills",
-      "description": "A curated collection of reusable Codex skills for practical development workflows.",
+      "description": "Forgekit is a curated collection of reusable Codex skills for practical engineering workflows.",
       "source": {
         "source": "local",
         "path": "./"

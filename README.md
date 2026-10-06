@@ -1,6 +1,6 @@
-# Stanista Skills
+# Forgekit
 
-A small, auditable collection of reusable skills for Codex, distributed as an installable plugin through a Git-backed marketplace.
+A small, auditable engineering toolkit for Codex, distributed as an installable plugin through a Git-backed marketplace.
 
 ## Skills
 

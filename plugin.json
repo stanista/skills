@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "stanista-skills",
-  "version": "0.3.0",
-  "description": "A curated collection of reusable Codex skills for practical, safe, and reproducible development workflows.",
+  "version": "0.3.1",
+  "description": "Forgekit is a curated collection of reusable Codex skills for practical, safe, and reproducible engineering workflows.",
   "author": {
     "name": "stanista",
     "url": "https://github.com/stanista"
@@ -19,9 +19,9 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Stanista Skills",
-        "shortDescription": "Reusable Codex workflows",
-        "longDescription": "A curated collection of independent Codex skills for development workflows. Install once to make each bundled skill available for implicit or explicit use; review individual skill descriptions for their scope and behavior.",
+        "displayName": "Forgekit",
+        "shortDescription": "Engineering kit for Codex",
+        "longDescription": "Forgekit is a curated collection of independent Codex skills for practical engineering workflows. Install once to make each bundled skill available for implicit or explicit use; review individual skill descriptions for their scope and behavior.",
         "developerName": "stanista",
         "category": "Developer Tools",
         "capabilities": [
@@ -30,7 +30,7 @@
         ],
         "websiteURL": "https://github.com/stanista/skills",
         "defaultPrompt": [
-          "Show me which Stanista Skills are available and when to use them."
+          "Show me which Forgekit skills are available and when to use them."
         ]
       }
     }
