@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "stanista-skills",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Forgekit is a curated collection of reusable Codex skills for practical, safe, and reproducible engineering workflows.",
   "author": {
     "name": "stanista",

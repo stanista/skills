@@ -7,6 +7,7 @@ A small, auditable engineering toolkit for Codex, distributed as an installable 
 | Skill | Purpose |
 | --- | --- |
 | [`ml-experiment`](./skills/ml-experiment/) | Runs and debugs reproducible ML experiments locally or on Google Colab while preserving metrics, artifacts, and Git provenance. |
+| [`project-maintenance`](./skills/project-maintenance/) | Leads substantial project work from discovery and implementation through verification, documentation, and handoff. |
 | [`safe-local-install`](./skills/safe-local-install/) | Installs or evaluates local software with minimal machine impact, appropriate isolation, source inspection, verification, and rollback guidance. |
 
 ## Install
@@ -60,6 +61,7 @@ Codex may select a skill automatically when the request matches its description.
 ```text
 $safe-local-install install the requested utility locally
 $ml-experiment run and document this benchmark reproducibly
+$project-maintenance lead this project task and keep its guidance current
 ```
 
 Review a skill before enabling it. A skill influences agent behavior and may include executable scripts or references in addition to its instructions.

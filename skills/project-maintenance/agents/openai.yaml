@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Maintenance"
+  short_description: "Lead project work and keep guidance current."
+  default_prompt: "Use $project-maintenance to lead this project task, verify the changes, and update relevant project guidance."
